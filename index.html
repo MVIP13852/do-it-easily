@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Do It Easily - D.I.E</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="dark-mode">
+  <!-- حالت تاریک/روشن -->
+  <div class="theme-toggle" onclick="toggleTheme()">🌓</div>
+
+  <!-- خوش‌آمدگویی -->
+  <header class="welcome">
+    <h1>به D.I.E خوش آمدید</h1>
+    <p>ساده‌ترین راه برای دریافت فایل‌های آماده، کاربردی و حرفه‌ای</p>
+  </header>
+
+  <!-- سبدها -->
+  <section class="baskets">
+    <div class="basket">
+      <h2>📊 پاورپوینت‌های حرفه‌ای</h2>
+      <p>مناسب ارائه‌های درسی، کاری و شخصی</p>
+      <button class="fire-button" onclick="redirectToWhatsApp('پاورپوینت حرفه‌ای')">خرید فایل</button>
+    </div>
+    <div class="basket">
+      <h2>📄 رزومه آماده</h2>
+      <p>رزومه‌های آماده با طراحی شیک و قابل ویرایش</p>
+      <button class="fire-button" onclick="redirectToWhatsApp('رزومه آماده')">خرید فایل</button>
+    </div>
+    <div class="basket">
+      <h2>📷 قالب پست اینستاگرام</h2>
+      <p>قالب‌های جذاب برای افزایش تعامل پیج شما</p>
+      <button class="fire-button" onclick="redirectToWhatsApp('قالب اینستاگرام')">خرید فایل</button>
+    </div>
+  </section>
+
+  <!-- پشتیبانی -->
+  <div class="support" onclick="openSupportChat()">
+    💬 پشتیبانی
+  </div>
+
+  <!-- نوار پایین -->
+  <footer>
+    <nav class="bottom-nav">
+      <button class="fire-button" onclick="openPage('about')">درباره ما</button>
+      <button class="fire-button" onclick="openPage('faq')">سوالات متداول</button>
+      <button class="fire-button" onclick="openPage('contact')">تماس با ما</button>
+    </nav>
+  </footer>
+
+  <!-- شماره پشتیبانی -->
+<div class="contact-number">
+  <a href="tel:+989962462337">📞 +989962462337</a>
+</div>
+</body>
+</html>

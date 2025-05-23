@@ -1,0 +1,254 @@
+/* فونت وزیر گوگل فونت */
+@import url('https://cdn.fontcdn.ir/woff/iransans/iransans.css');
+
+/* تنظیمات پایه */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IranSans', Tahoma, sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #f5f5f5;
+  min-height: 100vh;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  line-height: 1.6;
+  user-select: none;
+}
+
+/* حالت تاریک و روشن */
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* خوش آمدگویی */
+header.welcome {
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #333;
+  background: linear-gradient(90deg, #ffcc00, #ff9900);
+  color: #0d0d0d;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px #ffcc00;
+  user-select: text;
+}
+
+header.welcome p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  color: #333;
+}
+
+/* سبدها */
+section.baskets {
+  display: flex;
+  gap: 1.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3rem 1rem;
+}
+
+.basket {
+  background: #1a1a1a;
+  border: 2px solid #ffcc00;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 20px #ffcc00aa;
+  cursor: default;
+  user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.basket:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 35px #ffcc00ff;
+}
+
+.basket h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #ffcc00;
+  user-select: text;
+}
+
+.basket p {
+  color: #ddd;
+  margin-bottom: 1.5rem;
+  min-height: 60px;
+  user-select: text;
+}
+
+/* دکمه با افکت آتش */
+button.fire-button {
+  background: linear-gradient(45deg, #ffcc00, #ff9900);
+  border: none;
+  color: #0d0d0d;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  box-shadow: 0 0 20px #ffcc00aa;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+button.fire-button:hover {
+  box-shadow: 0 0 30px #ffcc00ff;
+  transform: scale(1.1);
+}
+
+button.fire-button:active {
+  animation: fire-flame 0.6s ease forwards;
+  transform: scale(0.95);
+}
+
+@keyframes fire-flame {
+  0% {
+    box-shadow:
+      0 0 10px #ffcc00,
+      0 0 20px #ff9900,
+      0 0 40px #ff6600;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+/* حالت تاریک/روشن */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ffcc00;
+  user-select: none;
+  z-index: 1000;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: #ffaa00;
+}
+
+/* پشتیبانی */
+.support {
+  position: fixed;
+  bottom: 50px; /* این مقدار رو به 50px تغییر بده */
+  left: 20px;
+  background: #ffcc00;
+  color: #0d0d0d;
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 0 30px #ffcc00bb;
+  user-select: none;
+  transition: box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+
+.support:hover {
+  box-shadow: 0 0 45px #ffaa00cc;
+}
+
+/* نوار پایین */
+footer {
+  width: 100%;
+  padding: 1rem 0;
+  background: #111;
+  border-top: 2px solid #ffcc00;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  z-index: 900;
+}
+
+.bottom-nav button {
+  background: linear-gradient(45deg, #ffcc00, #ff9900);
+  border: none;
+  margin: 0 12px;
+  padding: 0.8rem 1.8rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 50px;
+  color: #0d0d0d;
+  cursor: pointer;
+  box-shadow: 0 0 20px #ffcc00aa;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.bottom-nav button:hover {
+  box-shadow: 0 0 30px #ffcc00ff;
+  transform: scale(1.1);
+}
+
+.bottom-nav button:active {
+  animation: fire-flame 0.6s ease forwards;
+  transform: scale(0.95);
+}
+
+/* شماره تماس */
+.contact-number {
+  position: fixed;
+  bottom: 90px; /* این مقدار رو به 90px تغییر بده */
+  right: 20px;
+  font-weight: 700;
+  color: #ffcc00;
+  font-size: 1.2rem;
+  text-shadow: 0 0 10px #ffcc00;
+  user-select: none;
+}
+
+
+.contact-number a {
+  color: #ffcc00;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-number a:hover {
+  color: #ffaa00;
+  text-decoration: underline;
+}
+
+/* محتوای اصلی در صفحات داخلی */
+.content {
+  max-width: 900px;
+  margin: 5rem auto 6rem;
+  padding: 0 1rem;
+  font-size: 1.15rem;
+  color: #eee;
+  user-select: text;
+}
+
+/* ریسپانسیو */
+@media screen and (max-width: 768px) {
+  section.baskets {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .basket {
+    width: 90%;
+    max-width: 400px;
+  }
+}
